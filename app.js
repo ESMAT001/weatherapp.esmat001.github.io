@@ -9,6 +9,7 @@ async function weather(city) {
         document.querySelector(".para").textContent = "";
     } else {
         document.querySelector(".msg").textContent = "";
+        document.getElementById("text").value = "";
         let temp = "";
         let maxTemp = "";
         let minTemp = "";
@@ -32,10 +33,10 @@ async function weather(city) {
         // console.log(newData);
 
         document.querySelector(".para").innerHTML =
-            `The weather info in <span>${city}</span> are:<br>
+            `The weather info for <span>${city}</span> is:<br>
             <span>Temperature</span>: ${temp} °C <br>
             <span>Max temperature:</span> ${maxTemp} °C <br>
-            <span>Mintemperature:</span> ${minTemp} °C<br>
+            <span>Min temperature:</span> ${minTemp} °C<br>
             <span>Humidity:</span> ${humidity} <br>`;
         //    <span> weather state</span>:${weatherState}<br> 
 
